@@ -1,9 +1,5 @@
-export const education_status_type_options  = [
-    { value: 'dropped out of', label: 'dropped out of' },
-    { value: 'working on', label: 'working on' },
-    { value: 'graduated from', label: 'graduated from' },
-]
-  
+export const job_type_options = [];
+
 export default {
-    education_status_type_options,
-}
+  job_type_options,
+};

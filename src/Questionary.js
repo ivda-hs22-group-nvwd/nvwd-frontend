@@ -8,8 +8,24 @@ import axios from "axios";
 import { body_type_options } from "./options/body_type";
 import { diet_modifier_options } from "./options/diet_modifier";
 import { diet_type_options } from "./options/diet_type";
+import { drinks_options } from "./options/drinks_type";
+import { drugs_type_options } from "./options/drugs_type";
+import { education_institution_status_options } from "./options/education_status_type";
+import { education_institution_type_options } from "./options/education_institution_type";
+import { ethnicities_type_options } from "./options/ethnicities_type";
 import example from "./example.json";
+import { income_type } from "./options/income_type";
+import { job_type_options } from "./options/job_type";
+import { offspring_future_type } from "./options/offspring_future_type";
+import { offspring_status_type } from "./options/offspring_status_type";
+import { pets_cats_type_options } from "./options/pets_cats_type";
+import { pets_dogs_type_options } from "./options/pets_dogs_type";
+import { religion_modifier_options } from "./options/religion_modifier";
+import { religion_type_options } from "./options/religion_type";
 import { sex_type_options } from "./options/sex_type";
+import { sign_modifier_options } from "./options/sign_modifier";
+import { sign_type_options } from "./options/sign_type";
+import { smokes_type_options } from "./options/smokes_type";
 
 const getData = async () => {
   const response = await axios
