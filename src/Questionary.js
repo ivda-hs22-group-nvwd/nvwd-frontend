@@ -37,6 +37,12 @@ const getData = async () => {
 };
 
 export default class Questionary extends Component {
+  createJson = () => {
+    var obj = new Object();
+    obj.age = this.state.age;
+    var jsonString = JSON.stringify(obj);
+    console.log(jsonString);
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -57,16 +63,16 @@ export default class Questionary extends Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log(event.target[1].value);
-
-    getData();
+    this.createJson();
+    //getData();
   }
 
-  // callback function
+  // callback functions
   getDietModifierValue = (dietModifier) => {
     this.setState({ dietModifier: dietModifier });
   };
   getDietTypeValue = (dietType) => {
-    this.setState({ dietTyp: dietType });
+    this.setState({ dietType: dietType });
   };
 
   render() {
@@ -81,8 +87,6 @@ export default class Questionary extends Component {
             options={diet_type_options}
             parentCallback={this.getDietTypeValue}
           ></Options>
-
-          {/* TODO: state for numerical inputs */}
 
           <label>
             Age
