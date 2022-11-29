@@ -266,6 +266,9 @@ export default class Questionary extends Component {
             parentCallback={this.getReligionModifier}
           ></Options>
 
+          {/* https://www.freecodecamp.org/news/how-to-work-with-multiple-checkboxes-in-react/ */}
+          {/* Checkboxes for speaks and ethnicitites */}
+
           <label>
             Age
             <NumericInput
