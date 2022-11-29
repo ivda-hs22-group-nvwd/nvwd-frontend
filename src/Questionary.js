@@ -39,7 +39,12 @@ const getData = async () => {
 export default class Questionary extends Component {
   constructor(props) {
     super(props);
-    this.state = { dietModifierData: "-", dietTypeData: "-" };
+    this.state = {
+      age: 0,
+      height: 0,
+      dietModifier: "-",
+      dietType: "-",
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -57,11 +62,11 @@ export default class Questionary extends Component {
   }
 
   // callback function
-  getDietModifierValue = (dietModifierData) => {
-    this.setState({ dietModifierData: dietModifierData });
+  getDietModifierValue = (dietModifier) => {
+    this.setState({ dietModifier: dietModifier });
   };
-  getDietTypeValue = (dietTypeData) => {
-    this.setState({ dietTypeData: dietTypeData });
+  getDietTypeValue = (dietType) => {
+    this.setState({ dietTyp: dietType });
   };
 
   render() {
@@ -81,16 +86,25 @@ export default class Questionary extends Component {
 
           <label>
             Age
-            <NumericInput min={18} max={100} value={18} />
+            <NumericInput
+              min={18}
+              max={110}
+              onChange={(event) => this.setState({ age: event })}
+            />
           </label>
           <label>
             Height
-            <NumericInput min={100} max={230} value={150} />
+            <NumericInput
+              min={100}
+              max={230}
+              onChange={(event) => this.setState({ height: event })}
+            />
           </label>
 
           <input type="submit" value="Submit" />
         </form>
-        <h1>{this.state.dietTypeData}</h1>
+        <h1>{this.state.dietType}</h1>
+        <div>{this.state.age}</div>
       </>
     );
   }
